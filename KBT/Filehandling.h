@@ -6,7 +6,13 @@
 
 struct FILEHANDLE {
 	static std::string getTotalStrokes();
+
 	static std::string getCurrStrokes();
+	static void resetCurrStrokes();
+
+	static std::string getLoggedDate();
+	static void updateDateFiles(std::string newDate);
+	
 	static bool CheckFileExist(const char* Filename);
 };
 

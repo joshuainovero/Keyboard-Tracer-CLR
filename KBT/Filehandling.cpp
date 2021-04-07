@@ -9,6 +9,8 @@ std::string FILEHANDLE::getTotalStrokes() {
 	return TotalKS;
 }
 
+
+
 std::string FILEHANDLE::getCurrStrokes() {
 	std::string CurrStrokes;
 	std::ifstream ReadCurrStrokes("CurrentStrokes");
@@ -16,6 +18,27 @@ std::string FILEHANDLE::getCurrStrokes() {
 	ReadCurrStrokes.close();
 	return CurrStrokes;
 }
+void FILEHANDLE::resetCurrStrokes() {
+	std::ofstream ResetCurrStrokes("CurrentStrokes");
+		ResetCurrStrokes << "0";
+	ResetCurrStrokes.close();
+}
+
+
+std::string FILEHANDLE::getLoggedDate() {
+	std::string LoggedDate;
+	std::ifstream ReadLoggedDate("LoggedDate");
+		ReadLoggedDate >> LoggedDate;
+	ReadLoggedDate.close();
+	return LoggedDate;
+}
+void FILEHANDLE::updateDateFiles(std::string newDate) {
+	std::ofstream UpdateLoggedDate("LoggedDate");
+		UpdateLoggedDate << newDate;
+	UpdateLoggedDate.close();
+}
+
+
 
 bool FILEHANDLE::CheckFileExist(const char* Filename) {
 	std::ifstream file(Filename);

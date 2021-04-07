@@ -8,8 +8,8 @@
 #include <tlhelp32.h>
 
 #include "Process.h"
-#include "Filehandling.h"
 #include "Date.h"
+#include "Filehandling.h"
 
 namespace KBT {
 	
@@ -442,6 +442,12 @@ namespace KBT {
 			this->TodayVal->Name = L"TodayVal";
 			this->TodayVal->Size = System::Drawing::Size(14, 16);
 			this->TodayVal->TabIndex = 28;
+			Date::SetDate();
+			if (Date::FullDateNow != FILEHANDLE::getLoggedDate()) {
+				FILEHANDLE::resetCurrStrokes();
+				FILEHANDLE::updateDateFiles(Date::FullDateNow);
+			}
+
 			this->TodayVal->Text = gcnew String(FILEHANDLE::getCurrStrokes().c_str());
 			// 
 			// AverageVal
@@ -557,7 +563,7 @@ namespace KBT {
 		//Total strokes refresh
 		this->TotalVal->Text = gcnew String(FILEHANDLE::getTotalStrokes().c_str());
 		this->TotalVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::getTotalStrokes()), 148);
-
+		
 		//Current strokes refresh
 		this->TodayVal->Text = gcnew String(FILEHANDLE::getCurrStrokes().c_str());
 		this->TotalVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::getCurrStrokes()), 148);
