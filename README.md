@@ -6,8 +6,8 @@ application is not made for storing the characters from your keyboard. Though th
 how many TIMES the keys are being pressed.
 
 <strong>Features:</strong>
-<u>- Can be hidden in the background process</u>
-<u>asd</u>
+- Can be hidden in the background process
+
 - Total Keystrokes
 
 - Total Keystrokes Today
