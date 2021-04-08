@@ -3,7 +3,7 @@
 
 std::string FILEHANDLE::getTotalStrokes() {
 	std::string TotalKS;
-	std::ifstream ReadTotalKS("Strokes");
+	std::ifstream ReadTotalKS("Logs");
 		ReadTotalKS >> TotalKS;
 	ReadTotalKS.close();
 	return TotalKS;
@@ -13,13 +13,13 @@ std::string FILEHANDLE::getTotalStrokes() {
 
 std::string FILEHANDLE::getCurrStrokes() {
 	std::string CurrStrokes;
-	std::ifstream ReadCurrStrokes("CurrentStrokes");
+	std::ifstream ReadCurrStrokes("CurrentLogs");
 		ReadCurrStrokes >> CurrStrokes;
 	ReadCurrStrokes.close();
 	return CurrStrokes;
 }
 void FILEHANDLE::resetCurrStrokes() {
-	std::ofstream ResetCurrStrokes("CurrentStrokes");
+	std::ofstream ResetCurrStrokes("CurrentLogs");
 		ResetCurrStrokes << "0";
 	ResetCurrStrokes.close();
 }

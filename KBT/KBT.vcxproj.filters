@@ -40,11 +40,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Strokes" />
-    <None Include="CurrentStrokes" />
     <None Include="LoggedDate" />
     <None Include="DatesLogged" />
     <None Include="RecordedStrokes" />
+    <None Include="Logs" />
+    <None Include="CurrentLogs" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="KBT.rc">

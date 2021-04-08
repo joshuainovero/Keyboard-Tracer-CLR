@@ -12,9 +12,9 @@ int main() {
             if (GetAsyncKeyState(KEY) == -32767) {
                 //For total strokes
                 uint32_t strokes;
-                std::ifstream ReadStrokes("Strokes");
+                std::ifstream ReadStrokes("Logs");
                     ReadStrokes >> strokes;
-                    std::ofstream UpdateStrokes("Strokes");
+                    std::ofstream UpdateStrokes("Logs");
                         strokes++;
                         UpdateStrokes << strokes;
                     UpdateStrokes.close();
@@ -22,9 +22,9 @@ int main() {
 
                 //For current strokes
                 uint32_t currentStrokes;
-                std::ifstream ReadCurrStrokes("CurrentStrokes");
+                std::ifstream ReadCurrStrokes("CurrentLogs");
                     ReadCurrStrokes >> currentStrokes;
-                    std::ofstream UpdateCurrStrokes("CurrentStrokes");
+                    std::ofstream UpdateCurrStrokes("CurrentLogs");
                         currentStrokes++;
                         UpdateCurrStrokes << currentStrokes;
                     UpdateCurrStrokes.close();

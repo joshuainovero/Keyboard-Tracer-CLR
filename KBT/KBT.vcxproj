@@ -133,11 +133,11 @@
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="CurrentStrokes" />
+    <None Include="CurrentLogs" />
     <None Include="DatesLogged" />
     <None Include="LoggedDate" />
     <None Include="RecordedStrokes" />
-    <None Include="Strokes" />
+    <None Include="Logs" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="KBT.rc" />
