@@ -19,4 +19,4 @@ Features:
 - It can be enabled
   and disabled easily!
   
-![Capture](https://user-images.githubusercontent.com/78135477/114075399-148bdb80-98d8-11eb-8990-81dd47208ff8.PNG)
+                      ![Capture](https://user-images.githubusercontent.com/78135477/114075399-148bdb80-98d8-11eb-8990-81dd47208ff8.PNG)
