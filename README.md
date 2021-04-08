@@ -18,7 +18,8 @@ Features:
 
 - It can be enabled
   and disabled easily!
-  
+  <br>
+  <tr></tr>
   
   <br><br>
   
