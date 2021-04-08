@@ -19,7 +19,7 @@ Features:
 - It can be enabled
   and disabled easily!
   <br>
-  <tr>
+  <hr></hr>
   <br><br>
   
    <p align="center"> 
