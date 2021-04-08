@@ -5,6 +5,13 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KBT", "KBT\KBT.vcxproj", "{7D8C55A0-52CF-4FB3-9F16-1A64C21F8253}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Background Process", "Background Process", "{1005F0FB-B01C-4C84-ACC4-E0D1AFF61D7E}"
+	ProjectSection(SolutionItems) = preProject
+		Background Process\ConsoleLogs.cpp = Background Process\ConsoleLogs.cpp
+		Background Process\Logger.cpp = Background Process\Logger.cpp
+		Background Process\Logs = Background Process\Logs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

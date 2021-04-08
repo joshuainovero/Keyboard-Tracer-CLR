@@ -1,11 +1,10 @@
 #include <iostream>
 #include <fstream>
 
-using namespace std::literals::chrono_literals;
 
 int main() {
 
+	std::cout << "Hello World" << std::endl;
 
-
-	system("pause");
+	return EXIT_SUCCESS;
 }
