@@ -43,6 +43,8 @@
     <None Include="Strokes" />
     <None Include="CurrentStrokes" />
     <None Include="LoggedDate" />
+    <None Include="DatesLogged" />
+    <None Include="RecordedStrokes" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="KBT.rc">

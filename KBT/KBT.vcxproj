@@ -134,7 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CurrentStrokes" />
+    <None Include="DatesLogged" />
     <None Include="LoggedDate" />
+    <None Include="RecordedStrokes" />
     <None Include="Strokes" />
   </ItemGroup>
   <ItemGroup>
