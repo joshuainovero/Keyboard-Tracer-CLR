@@ -9,7 +9,7 @@ how many TIMES the keys are being pressed.
 - Can be hidden in the background process
 
 - Total Keystrokes
-
+<ins>asdd</ins>
 - Total Keystrokes Today
 
 - Average Keystrokes
