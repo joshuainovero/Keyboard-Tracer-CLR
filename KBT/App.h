@@ -444,6 +444,7 @@ namespace KBT {
 			this->TodayVal->TabIndex = 28;
 			Date::SetDate();
 			if (Date::FullDateNow != FILEHANDLE::getLoggedDate()) {
+				FILEHANDLE::updateRecordedStrokes();
 				FILEHANDLE::resetCurrStrokes();
 				FILEHANDLE::updateDateFiles(Date::FullDateNow);
 			}
@@ -460,7 +461,18 @@ namespace KBT {
 			this->AverageVal->Name = L"AverageVal";
 			this->AverageVal->Size = System::Drawing::Size(14, 16);
 			this->AverageVal->TabIndex = 29;
-			this->AverageVal->Text = L"0";
+
+			String^ ValAverage;
+			uint32_t lines = 0;
+			std::ifstream CheckSingleLineDatesLogged("DatesLogged");
+				std::string strLine;
+				while (std::getline(CheckSingleLineDatesLogged, strLine)) lines++;
+				if (lines == 1) ValAverage = "0"; //Quick examination if DatesLogged is a single line
+				else {
+					ValAverage = gcnew String(FILEHANDLE::averageRecordedStrokes().c_str());
+					this->AverageVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::averageRecordedStrokes().c_str()),190);
+				}
+			this->AverageVal->Text = ValAverage;
 			// 
 			// HighestVal
 			// 
@@ -472,7 +484,14 @@ namespace KBT {
 			this->HighestVal->Name = L"HighestVal";
 			this->HighestVal->Size = System::Drawing::Size(14, 16);
 			this->HighestVal->TabIndex = 30;
-			this->HighestVal->Text = L"0";
+
+			String^ valHighest;
+			if (lines == 1) valHighest = "0";
+			else {
+				valHighest = gcnew String(FILEHANDLE::getHighestStrokes().c_str());
+				this->HighestVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::getHighestStrokes()), 211);
+			}
+			this->HighestVal->Text = valHighest;
 			// 
 			// LowestVal
 			// 
@@ -484,7 +503,14 @@ namespace KBT {
 			this->LowestVal->Name = L"LowestVal";
 			this->LowestVal->Size = System::Drawing::Size(14, 16);
 			this->LowestVal->TabIndex = 31;
-			this->LowestVal->Text = L"0";
+
+			String^ valLowest;
+			if (lines == 1) valLowest = "0";
+			else {
+				valLowest = gcnew String(FILEHANDLE::getLowestStrokes().c_str());
+				this->LowestVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::getLowestStrokes()), 232);
+			}
+			this->LowestVal->Text = valLowest;
 			// 
 			// App
 			// 
