@@ -566,7 +566,7 @@ namespace KBT {
 		
 		//Current strokes refresh
 		this->TodayVal->Text = gcnew String(FILEHANDLE::getCurrStrokes().c_str());
-		this->TotalVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::getCurrStrokes()), 148);
+		this->TodayVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::getCurrStrokes()), 169);
 
 	}
 	private: System::Void Title_Click(System::Object^ sender, System::EventArgs^ e) {
