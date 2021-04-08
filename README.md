@@ -22,7 +22,7 @@ Features:
   <hr></hr>
   <br><br>
   
-   <p align="center" style="float:right"> 
+   <p style="float:right"> 
     <img src="https://user-images.githubusercontent.com/78135477/114075399-148bdb80-98d8-11eb-8990-81dd47208ff8.PNG" alt="alternate text">
  </p>
   
