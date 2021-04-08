@@ -6,7 +6,7 @@ application is not made for storing the characters from your keyboard. Though th
 how many TIMES the keys are being pressed.
 
 <strong>Features:</strong><br>
-<ins>- Can be hidden in the background process</ins>
+<ins>* Can be hidden in the background process</ins>
 
 - Total Keystrokes
 
