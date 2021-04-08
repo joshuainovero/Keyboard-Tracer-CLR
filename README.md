@@ -8,7 +8,7 @@ how many TIMES the keys are being pressed.
 <strong>Features:</strong><br>
 <ins>* Can be hidden in the background process</ins>
 
-*Total Keystrokes*
+__Total Keystrokes__
 
 - Total Keystrokes Today
 
