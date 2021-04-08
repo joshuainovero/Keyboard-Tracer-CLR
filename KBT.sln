@@ -5,13 +5,6 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KBT", "KBT\KBT.vcxproj", "{7D8C55A0-52CF-4FB3-9F16-1A64C21F8253}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exclude", "Exclude", "{00509461-7918-433B-9D1C-D8D39008A298}"
-	ProjectSection(SolutionItems) = preProject
-		KBT\Exclude\ConsoleLogs.cpp = KBT\Exclude\ConsoleLogs.cpp
-		KBT\Exclude\Logger.cpp = KBT\Exclude\Logger.cpp
-		KBT\Exclude\Logs = KBT\Exclude\Logs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
