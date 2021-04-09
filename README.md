@@ -23,12 +23,14 @@ how many TIMES the keys are being pressed.
   <br>
   <hr></hr>
   <br><br>
-
-    <img align="center" src="https://user-images.githubusercontent.com/78135477/114077582-8d8c3280-98da-11eb-83cf-ea48f972d154.PNG" alt="alternate text">
- 
+   
+   <div align="center">
+    <img src="https://user-images.githubusercontent.com/78135477/114077582-8d8c3280-98da-11eb-83cf-ea48f972d154.PNG" alt="alternate text">
+   </div>
   <br>
-
-     <img align="center" src="https://user-images.githubusercontent.com/78135477/114077760-b9a7b380-98da-11eb-872e-a7db1e1d8c30.PNG" alt="alternate text">
-  
+    
+    <div align="center">
+     <img src="https://user-images.githubusercontent.com/78135477/114077760-b9a7b380-98da-11eb-872e-a7db1e1d8c30.PNG" alt="alternate text">
+    </div>
 
 
