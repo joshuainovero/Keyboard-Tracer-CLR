@@ -5,7 +5,7 @@ However, this software does not record specific keys that are being pressed for 
 application is not made for storing the characters from your keyboard. Though this software tracks and monitors
 how many TIMES the keys are being pressed.
 
-<strong>Features:</strong><br><br>
+<strong>Features:</strong><br>
 - Can be hidden in background process
 
 - Total Keystrokes
