@@ -265,6 +265,8 @@ namespace KBT {
 			this->Reset->TabIndex = 11;
 			this->Reset->Text = L"Reset";
 			this->Reset->UseVisualStyleBackColor = false;
+			this->Reset->Click += gcnew System::EventHandler(this, &App::Reset_Click);
+
 			// 
 			// maskedTextBox1
 			// 
@@ -631,6 +633,61 @@ namespace KBT {
 		}
 		this->LowestVal->Text = valLowest;
 
+
+	}
+	private: System::Void Reset_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (MessageBox::Show("Are you sure you want to reset your data?", "Keyboard Tracer", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == System::Windows::Forms::DialogResult::Yes) {
+			//Reset Logs
+			std::ofstream ResetLogs("Logs");
+				ResetLogs << "0";
+			ResetLogs.close();
+			
+
+			//Reset CurrentLogs
+			std::ofstream ResetCurrentLogs("CurrentLogs");
+				ResetCurrentLogs << "0";
+			ResetCurrentLogs.close();
+
+			//Reset RecordedStrokes
+			std::ofstream ResetRecordedStrokes("RecordedStrokes");
+			ResetRecordedStrokes.close();
+			
+
+			Date date; date.SetDate();
+			//Reset LoggedDate
+			std::ofstream ResetLoggedDate("LoggedDate");
+				ResetLoggedDate << date.FullDateNow << std::endl;
+			ResetLoggedDate.close();
+
+			//Reset DatesLogged
+			std::ofstream ResetDatesLogged("DatesLogged");
+				ResetDatesLogged << date.FullDateNow << std::endl;
+			ResetDatesLogged.close();
+
+
+			//Retrieve values again...//
+			//Logs
+			this->TotalVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::getTotalStrokes()), 148); //4
+			this->TotalVal->Text = L"0";
+			
+			//CurrentLogs
+			this->TodayVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::getCurrStrokes()), 169);
+			this->TodayVal->Text = L"0";
+			
+			//Average
+			this->AverageVal->Location = System::Drawing::Point(302, 190);
+			this->AverageVal->Text = L"0";
+
+			//Highest
+			this->HighestVal->Location = System::Drawing::Point(302, 211);
+			this->HighestVal->Text = L"0";
+
+			//Lowest
+			this->LowestVal->Location = System::Drawing::Point(302, 232);
+			this->LowestVal->Text = L"0";
+		
+		
+		}	
 
 	}
 	private: System::Void Title_Click(System::Object^ sender, System::EventArgs^ e) {
