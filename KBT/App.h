@@ -587,12 +587,50 @@ namespace KBT {
 	}
 	private: System::Void Refresh_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Total strokes refresh
+		Date::SetDate();
+		if (Date::FullDateNow != FILEHANDLE::getLoggedDate()) {
+			FILEHANDLE::updateRecordedStrokes();
+			FILEHANDLE::resetCurrStrokes();
+			FILEHANDLE::updateDateFiles(Date::FullDateNow);
+		}
 		this->TotalVal->Text = gcnew String(FILEHANDLE::getTotalStrokes().c_str());
 		this->TotalVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::getTotalStrokes()), 148);
 		
 		//Current strokes refresh
 		this->TodayVal->Text = gcnew String(FILEHANDLE::getCurrStrokes().c_str());
 		this->TodayVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::getCurrStrokes()), 169);
+
+		//Average strokes refresh
+		String^ ValAverage;
+		uint32_t lines = 0;
+		std::ifstream CheckSingleLineDatesLogged("DatesLogged");
+		std::string strLine;
+		while (std::getline(CheckSingleLineDatesLogged, strLine)) lines++;
+		if (lines == 1) ValAverage = "0"; //Quick examination if DatesLogged is a single line
+		else {
+			ValAverage = gcnew String(FILEHANDLE::averageRecordedStrokes().c_str());
+			this->AverageVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::averageRecordedStrokes().c_str()), 190);
+		}
+		this->AverageVal->Text = ValAverage;
+
+		//Highest strokes refresh
+		String^ valHighest;
+		if (lines == 1) valHighest = "0";
+		else {
+			valHighest = gcnew String(FILEHANDLE::getHighestStrokes().c_str());
+			this->HighestVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::getHighestStrokes()), 211);
+		}
+		this->HighestVal->Text = valHighest;
+
+		//Lowest strokes refresh
+		String^ valLowest;
+		if (lines == 1) valLowest = "0";
+		else {
+			valLowest = gcnew String(FILEHANDLE::getLowestStrokes().c_str());
+			this->LowestVal->Location = System::Drawing::Point(302 - SetXPosition(FILEHANDLE::getLowestStrokes()), 232);
+		}
+		this->LowestVal->Text = valLowest;
+
 
 	}
 	private: System::Void Title_Click(System::Object^ sender, System::EventArgs^ e) {
